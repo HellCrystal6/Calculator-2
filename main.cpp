@@ -5,12 +5,7 @@
 using namespace std;
 
 void terminalCalculator() {
-
-	string s1 = "+";
-	string s2 = "-";
-	string s3 = "*";
-	string s4 = "/";
-
+	
 	cout << "Type 'exit' to quit when the signs come" << endl;
 	cout << "Choose A Number: " << endl;
 
