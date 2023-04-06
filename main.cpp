@@ -25,7 +25,7 @@ void terminalCalculator() {
 
 	cout << "First Number: " << num << endl;
 	cout << "Second Number: " << num2 << endl;
-	cout << "What would you like to do with those numbers?(add, sub, mul, div): " << endl;
+	cout << "What would you like to do with those numbers?(add, subtract, multiply, divide): " << endl;
 
 	string sign;
 	cin >> sign;
@@ -39,13 +39,13 @@ void terminalCalculator() {
 	if (sign == "add") {
 		cout << "The Answer Is: " << num + num2 << endl;
 	}
-	if (sign == "sub") {
+	if (sign == "subtract") {
 		cout << "The Answer Is: " << num - num2 << endl;
 	}
-	if (sign == "mul") {
+	if (sign == "multiply") {
 		cout << "The Answer Is: " << num * num2 << endl;
 	}
-	if (sign == "div") {
+	if (sign == "division") {
 		cout << "The Answer Is: " << num / num2 << endl;
 	}
 
