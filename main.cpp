@@ -1,59 +1,61 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
+#include <windows.h>
 
 using namespace std;
 
-void terminalCalculator() {
-	
-	cout << "Type 'exit' to quit when the signs come" << endl;
-	cout << "Choose A Number: " << endl;
+void calculator() {
 
-	int num;
-	cin >> num;
+	char oper;
+	double num1;
+	double num2;
 
-	cout << "First Number: " << num << endl;
-	cout << "Choose the second Number: " << endl;
+	cout << "Choose your first number: " << endl;
+	cin >> num1;
 
-	int num2;
+	cout << "Choose your operator (*, /, -, +): " << endl;
+	cin >> oper;
+
+	cout << "Choose your second number: " << endl;
 	cin >> num2;
 
-	cout << "First Number: " << num << endl;
-	cout << "Second Number: " << num2 << endl;
-	cout << "What would you like to do with those numbers?(add, subtract, multiply, divide): " << endl;
+	switch (oper) {
 
-	string sign;
-	cin >> sign;
+		case '+':
+			cout << "The answer is: " << num1 + num2 << endl;
+			break;
 
+		case '-':
+			cout << "The answer is: " << num1 - num2 << endl;
+			break;
 
-	if (sign == "exit") {
-		cout << "Exiting...";
-		exit(EXIT_FAILURE);
-	}
+		case '*':
+			cout << "The answer is: " << num1 * num2 << endl;
+			break;
 
-	if (sign == "add") {
-		cout << "The Answer Is: " << num + num2 << endl;
-	}
-	if (sign == "subtract") {
-		cout << "The Answer Is: " << num - num2 << endl;
-	}
-	if (sign == "multiply") {
-		cout << "The Answer Is: " << num * num2 << endl;
-	}
-	if (sign == "division") {
-		cout << "The Answer Is: " << num / num2 << endl;
-	}
+		case '/':
+			cout << "The answer is: " << num1 / num2 << endl;
+			break;
 
+		default:
+			cout << "That is not a valid operator!" << endl;
+			system("cls");
+			break;
 
-	while (true) {
-		terminalCalculator();
 	}
 
 }
 
 int main() {
 
-	terminalCalculator();
+	bool x = true;
+
+	while (x) {
+
+		calculator();
+
+	}
 
 	return 0;
 
