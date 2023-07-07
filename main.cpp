@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits>
+#include <cmath>
 
 using namespace std;
 
@@ -10,7 +11,7 @@ void calculator() {
   cout << "Choose your first number: ";
   cin >> num1;
 
-  cout << "Choose your operator (*, /, -, +): ";
+  cout << "Choose your operator (*, /, -, +, ^): ";
   cin >> oper;
 
   cout << "Choose your second number: ";
@@ -38,6 +39,9 @@ void calculator() {
       cout << "The answer is: " << num1 / num2 << endl;
     else
       cout << "Division by zero is not allowed." << endl;
+    break;
+  case '^':
+    cout << "The answer is: " << pow(num1, num2) << endl;
     break;
   default:
     cout << "That is not a valid operator!" << endl;
